@@ -1,0 +1,31 @@
+<table class="table table-condensed">
+    <thead>
+    <tr>
+        <th>Current Batsman</th>
+        <th>R</th>
+        <th>B</th>
+        <th>4</th>
+        <th>6</th>
+        <!--<th>S/R</th>-->
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr [ngClass]="boldText1">
+        <td>{{batsman1.name}} {{batsman1.number}} [{{batsman1.temperament}}] [{{batsman1.orientation}}]</td>
+        <td>{{batsman1.runs}}</td>
+        <td>{{batsman1.balls}}</td>
+        <td>{{batsman1.fours}}</td>
+        <td>{{batsman1.sixes}}</td>
+        <!--<td>{{batsman1.runs / batsman1.balls * 100 | number : '1.2-2'}}</td>-->
+    </tr>
+    <tr [ngClass]="boldText2">
+        <td>{{batsman2.name}} {{batsman2.number}} [{{batsman2.temperament}}] [{{batsman2.orientation}}]</td>
+        <td>{{batsman2.runs}}</td>
+        <td>{{batsman2.balls}}</td>
+        <td>{{batsman2.fours}}</td>
+        <td>{{batsman2.sixes}}</td>
+        <!--<td>{{batsman2.runs / batsman2.balls * 100 | number : '1.2-2'}}</td>-->
+    </tr>
+    </tbody>
+</table>

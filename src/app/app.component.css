@@ -1,0 +1,57 @@
+.face-delivery {
+    text-align: center;
+    font-size: 28px;
+    cursor: pointer;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    transition: background-color 0.5s ease;
+}
+.face-delivery:hover {
+    background-color: #286090;
+}
+.face-delivery:active {
+    background-color: #000000;
+}
+
+.face-delivery {
+    margin: 0;
+    padding: 0;
+}
+
+.face-delivery .panel-body {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.table {
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.table thead {
+    background-color: #eaeaea;
+}
+
+.table.commentary {
+    margin-bottom: 20px;
+}
+
+
+.on-strike {
+    font-weight: bold;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+h4 {
+    margin: 0 0 5px 0;
+}
+

@@ -1,149 +1,69 @@
-<br /><br />
+<br />
 
 <div class="row">
   <div class="col-lg-offset-4 col-lg-4">
 
+    <div class="panel panel-default" style="padding: 20px 30px;">
+
       <div class="row">
-        <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-body">
-              <h3>{{team1[0].name}} {{team1[0].strike}}</h3>
-              {{team1[0].runs}}/{{team1[0].wickets}}<br />
-              {{team1[0].overs}}.{{team1[0].balls}} Ov
-            </div>
-          </div>
+        <div class="col-md-8">
+            <score [team1]='team1[0]' [team2]='team2[0]'></score>
         </div>
-
-        <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-body text-center">
-              <h3>Conditions</h3>
-              Weather - {{conditionWeather}}<br />
-              Pitch - {{conditionPitch}}
-            </div>
-          </div>
+        <div class="col-md-4 text-right">
+            <weather></weather>
         </div>
+      </div>
 
-        <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-body text-right">
-              <h3>{{team2[0].name}}{{team2[0].strike}}</h3>
-              {{team2[0].runs}}/{{team2[0].wickets}}<br />
-              {{team2[0].overs}}.{{team2[0].balls}} Ov
+      <br />
+
+      <div class="row">
+        <div class="col-md-12">
+            <batsmen [batsman1]='batsman1[0]' [batsman2]='batsman2[0]'></batsmen>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+            <bowlers [bowler1]='bowler1[0]' [bowler2]='bowler2[0]'></bowlers>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1>{{feedTitle}}</h1>
+        </div>
+      </div>
+
+      <!--<div class="row">
+        <div class="col-md-12">
+            <table class="table table-condensed commentary">
+                <tbody>
+                  <tr *ngFor='let commentary of commentaries'>
+                    <td><strong>{{commentary.over}}.{{commentary.ball}}</strong></td>
+                    <td>{{commentary.runs}} !</td>
+                  </tr>
+                  <tr>
+                    <td><strong>0.0</strong></td>
+                    <td>Play is about to get underway</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>-->
+
+    <br />
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default alert alert-info face-delivery">
+            <div class="panel-body" (click)='faceDelivery()'>
+              {{buttonMessage}}
             </div>
           </div>
         </div>
       </div>
 
-      <!--<div class="panel panel-default">
-        <div class="panel-body">
+    </div>
 
-          <table class="table table-condensed">
-              <thead>
-                <tr>
-                  <th>Current Batsman</th>
-                  <th>Press.</th>
-                  <th>Conf.</th>
-                  <th>R</th>
-                  <th>B</th>
-                  <th>4</th>
-                  <th>6</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td>Batsman {{batsman}} [{{batsmanTemperment}}] {{batsmanOrientation}}*</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td>Batsman {{batsman}} [{{bowlerTemperment}}] {{bowlerOrientation}}</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                </tr>
-              </tbody>
-          </table>
-
-        </div>
-      </div>-->
-
-      <!--<div class="panel panel-default">
-        <div class="panel-body">
-
-          <table class="table table-condensed">
-              <thead>
-                <tr>
-                  <th>Current Bowlers</th>
-                  <th>Press.</th>
-                  <th>Conf.</th>
-                  <th>O</th>
-                  <th>M</th>
-                  <th>R</th>
-                  <th>W</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td>Bowler 1 [aggressive] rh*</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td>Bowler 2 [defensive] lh</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                </tr>
-              </tbody>
-          </table>
-
-        </div>
-      </div>-->
-
-      <div class="panel panel-default">
-        <div class="panel-body text-center">
-            <h1>{{feedTitle}}</h1>
-        </div>
-      </div>
-
-      <!--<div class="panel panel-default">
-        <div class="panel-body">
-
-          <table class="table table-condensed">
-              <tbody>
-                <tr>
-                  <td>0</td>
-                  <td>Play is about to get underway</td>
-                  <td class="text-right">0.0 Ov</td>
-                </tr>
-              </tbody>
-          </table>
-
-        </div>
-      </div>-->
-
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <button class="btn btn-default btn-lg btn-block" (click)='faceDelivery()'>{{buttonMessage}}</button>
-        </div>
-      </div>
-      
   </div>
 </div>

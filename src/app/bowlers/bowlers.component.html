@@ -1,0 +1,28 @@
+<table class="table table-condensed">
+    <thead>
+    <tr>
+        <th>Current Bowlers</th>
+        <th>O</th>
+        <th>M</th>
+        <th>R</th>
+        <th>W</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr [ngClass]="boldText3">
+        <td>{{bowler1.name}}</td>
+        <td>{{bowler1.overs}}.{{bowler1.balls}}</td>
+        <td>{{bowler1.maidens}}</td>
+        <td>{{bowler1.runs}}</td>
+        <td>{{bowler1.wickets}}</td>
+    </tr>
+    <tr [ngClass]="boldText4">
+        <td>{{bowler2.name}}</td>
+        <td>{{bowler2.overs}}.{{bowler2.balls}}</td>
+        <td>{{bowler2.maidens}}</td>
+        <td>{{bowler2.runs}}</td>
+        <td>{{bowler2.wickets}}</td>
+    </tr>
+    </tbody>
+</table>
